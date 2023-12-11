@@ -2,6 +2,10 @@
   <head>
     <link rel="stylesheet" href="./index.compiled.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- TODO: review page title -->
+    <title>Situation SAS</title>
+    <!-- TODO: add a meta description -->
+    <meta name="description" content="Situation SAS" />
   </head>
   <body class="font-['Inter']">
     <div class="bg-white flex-col justify-start items-center inline-flex">
@@ -249,7 +253,7 @@
 
       <!-- Section -->
 
-      <div class="pt-20 flex-col justify-start items-center gap-[120px] flex">
+      <div class="pt-20 flex-col justify-start items-center gap-[120px] flex" x-data="{ persona: 'dsi' }">
         <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-14 flex">
           <div class="h-[132px] flex-col justify-start items-center gap-6 flex">
             <div class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Toutes les équipes, en un seul endroit</div>
@@ -257,26 +261,46 @@
           </div>
           <div class="flex-col justify-start items-start gap-8 flex">
             <div class="w-[1130px] justify-start items-start gap-6 inline-flex">
-              <div class="grow shrink basis-0 px-6 py-3 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-1 inline-flex">
-                <img class="w-[70px] h-[70px]" src="https://via.placeholder.com/70x70" />
+              <button 
+                class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl border flex-col justify-start items-center gap-1 inline-flex"
+                :class="persona === 'dsi' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
+                @click="persona = 'dsi'"
+              >
+                <img class="w-[70px] h-[70px]" src="./images/illustrations/dsi.png" />
                 <div class="self-stretch text-center text-stone-950 text-base font-semibold leading-normal">DSI</div>
-              </div>
-              <div class="grow shrink basis-0 px-6 py-3 bg-white rounded-xl shadow border border-purple-700 flex-col justify-start items-center gap-1 inline-flex">
-                <img class="w-[70px] h-[70px]" src="https://via.placeholder.com/70x70" />
+              </button>
+              <button 
+                class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl shadow border flex-col justify-start items-center gap-1 inline-flex"
+                :class="persona === 'rssi' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
+                @click="persona = 'rssi'"
+              >
+                <img class="w-[70px] h-[70px]" src="./images/illustrations/rssi.png" />
                 <div class="self-stretch text-center text-stone-950 text-base font-semibold leading-normal">RSSI</div>
-              </div>
-              <div class="grow shrink basis-0 px-6 py-3 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-1 inline-flex">
-                <img class="w-[70px] h-[70px]" src="https://via.placeholder.com/70x70" />
+              </button>
+              <button 
+                class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl border flex-col justify-start items-center gap-1 inline-flex"
+                :class="persona === 'admin' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
+                @click="persona = 'admin'"
+              >
+                <img class="w-[70px] h-[70px]" src="./images/illustrations/admin.png" />
                 <div class="self-stretch text-center text-stone-950 text-base font-semibold leading-normal">Administrateur</div>
-              </div>
-              <div class="grow shrink basis-0 px-6 py-3 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-1 inline-flex">
-                <img class="w-[70px] h-[70px]" src="https://via.placeholder.com/70x70" />
+              </button>
+              <button 
+                class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl border flex-col justify-start items-center gap-1 inline-flex"
+                :class="persona === 'architect' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
+                @click="persona = 'architect'"
+              >
+                <img class="w-[70px] h-[70px]" src="./images/illustrations/architect.png" />
                 <div class="self-stretch text-center text-stone-950 text-base font-semibold leading-normal">Architecte</div>
-              </div>
-              <div class="grow shrink basis-0 px-6 py-3 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-1 inline-flex">
-                <img class="w-[70px] h-[70px]" src="https://via.placeholder.com/70x70" />
+              </button>
+              <button 
+                class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl border flex-col justify-start items-center gap-1 inline-flex"
+                :class="persona === 'developer' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
+                @click="persona = 'developer'"
+              >
+                <img class="w-[70px] h-[70px]" src="./images/illustrations/developer.png" />
                 <div class="self-stretch text-center text-stone-950 text-base font-semibold leading-normal">Développeur</div>
-              </div>
+              </button>
             </div>
             <img class="w-[1130px] h-[612.26px] rounded-lg shadow border border-neutral-200" src="https://via.placeholder.com/1130x612" />
           </div>
