@@ -4,6 +4,6 @@
 
 Run `npm install` and `npm run dev`, then simply open `./src/index.html`. Refresh whenever changes are made.
 
-## Publich
+## Publish
 
-Simply host the `src` directory to a static web server.
+Run `npm run build` and host the `src` directory on a static web server.

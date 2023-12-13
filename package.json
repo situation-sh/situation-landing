@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/index.css -o ./src/index.compiled.css --watch"
+    "dev": "tailwindcss -i ./src/index.css -o ./src/index.compiled.css --watch",
+    "build": "tailwindcss -i ./src/index.css -o ./src/index.compiled.css"
   },
   "author": "",
   "license": "ISC",
