@@ -124,12 +124,18 @@
           </div>
           <div class="mx-auto w-full aspect-video relative flex items-center justify-center">
             <img class="w-full rounded-lg shadow border border-neutral-200" src="https://via.placeholder.com/1130x612" />
-            <div class="w-10 h-10 left-[20px] top-1/2 transform -translate-y-1/2 absolute bg-stone-950 rounded-[100px] shadow border border-neutral-200">
-              <div class="w-6 h-6 left-[8px] top-[8px] absolute"></div>
-            </div>
-            <div class="w-10 h-10 right-[20px] top-1/2 transform -translate-y-1/2 absolute bg-stone-950 rounded-[100px] shadow border border-neutral-200">
-              <div class="w-6 h-6 left-[8px] top-[8px] absolute"></div>
-            </div>
+            <button 
+              class="w-10 h-10 left-[20px] top-1/2 transform -translate-y-1/2 absolute bg-stone-950 rounded-[100px] shadow border border-neutral-200"
+              @click="category = {list: 'api', map: 'list', dependencies: 'map', api: 'dependencies'}[category]"
+            >
+              <div class="w-6 h-6 left-[8px] top-[8px] absolute bg-cover" style="background-image: url('./images/chevron-left.svg')"></div>
+            </button>
+            <button 
+              class="w-10 h-10 right-[20px] top-1/2 transform -translate-y-1/2 absolute bg-stone-950 rounded-[100px] shadow border border-neutral-200"
+              @click="category = {list: 'map', map: 'dependencies', dependencies: 'api', api: 'list'}[category]"
+            >
+              <div class="w-6 h-6 left-[8px] top-[8px] absolute bg-cover" style="background-image: url('./images/chevron-right.svg')"></div>
+            </button>
           </div>
         </div>
         <!-- <img class="w-[341.88px] h-[277.20px] left-[1110px] top-[209.03px] absolute origin-top-left rotate-[-30.66deg]" src="https://via.placeholder.com/342x277" /> -->
@@ -305,7 +311,7 @@
             <img class="w-full rounded-lg shadow border border-neutral-200" src="https://via.placeholder.com/1130x612" />
           </div>
         </div>
-        <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-10 flex">
+        <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-10 flex" x-data="{ testimonial: 0 }">
           <div class="flex-col justify-start items-center gap-6 flex">
             <div class="max-w-4xl text-center text-neutral-500 text-3xl font-semibold leading-[38px]">“Il s’agit d’un outil simple à appréhender et qui offre le service le plus complet et le plus accessible du marché. “</div>
             <div class="justify-start items-center gap-3 inline-flex">
@@ -317,11 +323,26 @@
             </div>
           </div>
           <div class="justify-start items-start gap-3 inline-flex">
-            <div class="w-10 h-[3px] relative bg-stone-300"></div>
-            <div class="w-10 h-[3px] relative bg-stone-950"></div>
-            <div class="w-10 h-[3px] relative bg-stone-300"></div>
-            <div class="w-10 h-[3px] relative bg-stone-300"></div>
-            <div class="w-10 h-[3px] relative bg-stone-300"></div>
+            <button 
+              class="w-10 h-[3px] relative" :class="testimonial === 0 ? 'bg-stone-950' : 'bg-stone-300'"
+              @click="testimonial = 0"
+            ></button>
+            <button 
+              class="w-10 h-[3px] relative" :class="testimonial === 1 ? 'bg-stone-950' : 'bg-stone-300'"
+              @click="testimonial = 1"
+            ></button>
+            <button 
+              class="w-10 h-[3px] relative" :class="testimonial === 2 ? 'bg-stone-950' : 'bg-stone-300'"
+              @click="testimonial = 2"
+            ></button>
+            <button 
+              class="w-10 h-[3px] relative" :class="testimonial === 3 ? 'bg-stone-950' : 'bg-stone-300'"
+              @click="testimonial = 3"
+            ></button>
+            <button 
+              class="w-10 h-[3px] relative" :class="testimonial === 4 ? 'bg-stone-950' : 'bg-stone-300'"
+              @click="testimonial = 4"
+            ></button>
           </div>
         </div>
         <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-14 flex">
@@ -382,7 +403,8 @@
         <div class="flex-col justify-start items-center gap-3 flex">
           <div class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Des cas d’usages infinis</div>
           <div class="border-b border-purple-700 justify-center items-center gap-2 inline-flex">
-            <div class="text-purple-700 text-[15px] font-medium leading-[30px]">Voir les templates</div>
+            <!-- TODO: add URL -->
+            <a href="" class="text-purple-700 text-[15px] font-medium leading-[30px]">Voir les templates</a>
             <div class="w-5 h-5 relative bg-cover" style="background-image: url('./images/arrow-right.svg')"></div>
           </div>
         </div>
@@ -593,8 +615,10 @@
             </div>
             <div class="w-[322px] text-neutral-700 text-base font-normal leading-normal">Cartographie opérationnelle automatique et personnalisable pour une vision complète et multicouche de votre univers IT.</div>
             <div class="justify-start items-start gap-6 inline-flex">
-              <div class="w-8 h-8 relative"></div>
-              <div class="w-8 h-8 relative"></div>
+              <!-- TODO: add Twitter URL -->
+              <a href="" class="w-8 h-8 relative" style="background-image: url('./images/social-x.svg')"></a>
+              <!-- TODO: add LinkedIn URL -->
+              <a href="" class="w-8 h-8 relative" style="background-image: url('./images/social-linkedin.svg')"></a>
             </div>
           </div>
           <div class="flex-col justify-start items-end gap-2 inline-flex">
@@ -613,7 +637,8 @@
             <div class="w-5 h-5 relative"></div>
           </div>
           <div class="w-[149px] px-4 bg-purple-700 rounded-md justify-center items-center gap-2 flex">
-            <div class="text-white text-[15px] font-medium leading-[30px]">Contactez-nous</div>
+            <!-- TODO: Add interaction -->
+            <a href="" class="text-white text-[15px] font-medium leading-[30px]">Contactez-nous</a>
           </div>
         </div>
         <div class="w-full max-w-7xl mx-auto justify-between items-start inline-flex">
