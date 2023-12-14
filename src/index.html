@@ -166,34 +166,58 @@
       <div class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-start flex">
         <div class="max-w-7xl mx-auto self-stretch justify-start items-start gap-6 inline-flex">
           <div class="pb-14 justify-start items-start gap-2.5 flex">
-            <div class="w-[668px] text-stone-950 text-[44px] font-semibold leading-[52px]">Votre SI sous son meilleur angle : le vôtre</div>
+            <div class="text-stone-950 text-[44px] font-semibold leading-[52px]">Votre SI sous son meilleur angle : le vôtre</div>
           </div>
+          <!-- TODO: remove large explicit width assignment -->
           <img class="w-[438px] h-40 relative" src="./images/illustrations/hand-3.png" />
         </div>
         <div class="max-w-7xl mx-auto justify-start items-start gap-6 inline-flex flex-col">
           <!-- Block 1 -->
-          <div class="w-full p-10 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-8 inline-flex">
+          <div 
+            class="w-full p-10 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-8 inline-flex"
+            x-data="{ category: 'wifi' }"
+          >
             <div class="self-stretch h-[116px] flex-col justify-start items-start gap-3 flex">
               <div class="w-1/2 text-stone-950 text-2xl font-semibold leading-loose">Créez les cartes qui vous correspondent</div>
               <div class="w-1/2 text-neutral-500 text-base font-normal leading-normal">Organisez votre infrastructure en différentes vues personnalisées. Choisissez le périmètre, les niveaux d'abstraction et les métadonnées à visualiser afin de personnaliser chaque carte selon vos besoins et cas d’usage spécifiques.</div>
             </div>
             <img class="w-full relative rounded-lg border border-neutral-200" src="./images/product/map.png" />
             <div class="grid grid-cols-5 gap-1.5">
-              <div class="w-full px-3 bg-stone-950 rounded-md justify-center items-center gap-2 flex">
-                <div class="text-white text-[15px] font-medium leading-[30px] whitespace-pre">Wi-Fi Network</div>
-              </div>
-              <div class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex">
-                <div class="text-stone-950 text-[15px] font-medium leading-[30px] whitespace-pre">Hardware Component</div>
-              </div>
-              <div class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex">
-                <div class="text-stone-950 text-[15px] font-medium leading-[30px] whitespace-pre">User and Access Rights</div>
-              </div>
-              <div class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex">
-                <div class="text-stone-950 text-[15px] font-medium leading-[30px] whitespace-pre">Software License</div>
-              </div>
-              <div class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex">
-                <div class="text-stone-950 text-[15px] font-medium leading-[30px] whitespace-pre">Server</div>
-              </div>
+              <button 
+                class="w-full px-3 rounded-md justify-center items-center gap-2 flex"
+                :class="category === 'wifi' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                @click="category = 'wifi'"
+              >
+                <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Wi-Fi Network</div>
+              </button>
+              <button 
+                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
+                :class="category === 'hardware' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                @click="category = 'hardware'"
+              >
+                <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Hardware Component</div>
+              </button>
+              <button 
+                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
+                :class="category === 'access' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                @click="category = 'access'"
+              >
+                <div class="text-[15px] font-medium leading-[30px] whitespace-pre">User and Access Rights</div>
+              </button>
+              <button 
+                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
+                :class="category === 'software' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                @click="category = 'software'"
+              >
+                <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Software License</div>
+              </button>
+              <button 
+                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
+                :class="category === 'server' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                @click="category = 'server'"
+              >
+                <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Server</div>
+              </button>
             </div>
           </div>
           <!-- Block 2 -->
@@ -393,7 +417,7 @@
                   </div>
                 </div>
               </div>
-              <img class="w-[549px] h-[246px] relative" src="./images/product/table-cropped-2.png" />
+              <img class="w-full max-w-[549px] relative" src="./images/product/table-cropped-2.png" />
             </div>
           </div>
         </div>
@@ -473,7 +497,7 @@
             <div class="self-stretch text-stone-950 text-[44px] font-semibold leading-[52px]">Pricing plan</div>
             <div class="self-stretch text-neutral-500 text-xl font-medium leading-7">Créez des cartes incroyables gratuitement</div>
           </div>
-          <img class="w-[398px] h-[148px] relative" src="./images/illustrations/hand-4.png" />
+          <img class="w-full max-w-[398px] relative" src="./images/illustrations/hand-4.png" />
         </div>
         <div class="w-full max-w-5xl mx-auto flex-col justify-start items-center gap-14 flex">
           <div class="w-full rounded-lg border border-neutral-200 justify-start items-start inline-flex">
