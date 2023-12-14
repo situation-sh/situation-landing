@@ -32,7 +32,7 @@
           <div class="w-[127.02px] h-7 relative">
             <img class="w-[127.02px] h-7 left-0 top-0 absolute" src="./images/logo.svg" />
           </div>
-          <div class="justify-start items-start gap-6 flex">
+          <div class="justify-start items-start gap-6 hidden lg:flex">
             <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Produit</div>
             <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Comment ça marche</div>
             <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Pricing</div>
@@ -40,8 +40,8 @@
           </div>
         </div>
         <div class="justify-start items-center gap-6 flex">
-          <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Se connecter</div>
-          <div class="w-[149px] px-3 rounded-md border border-stone-950 justify-center items-center gap-2 flex">
+          <div class="hidden lg:block text-stone-950 text-[15px] font-medium leading-[30px]">Se connecter</div>
+          <div class="hidden lg:block w-[149px] px-3 rounded-md border border-stone-950 justify-center items-center gap-2 flex">
             <div class="text-stone-950 text-sm py-0.5 font-medium leading-normal whitespace-pre">Planifier une démo</div>
           </div>
           <div class="w-[220px] px-3 bg-purple-700 rounded-md justify-center items-center gap-2 flex">
@@ -54,7 +54,7 @@
 
       <div class="relative max-w-7xl mx-auto px-6 py-20">
         <div class="flex-col justify-start items-center gap-6 inline-flex">
-          <div class="text-center text-stone-950 text-[56px] font-bold leading-[64px]">Créez des cartes IT opérationnelles. Sur-mesure. Toujours à jour.</div>
+          <h1 class="text-center text-stone-950 text-[56px] font-bold leading-[64px]">Créez des cartes IT opérationnelles. Sur-mesure. Toujours à jour.</h1>
           <div class="self-stretch text-center text-neutral-500 text-xl font-medium leading-7">Visualisez instantanément la richesse de votre infrastructure avec une vision complète et multi-couches, intégrant le cloud, les services distribués, et la virtualisation.</div>
           <div class="justify-start items-start gap-6 inline-flex">
             <div class="w-[242px] px-4 bg-purple-700 rounded-md justify-center items-center gap-2 flex">
@@ -68,9 +68,9 @@
         <!-- Illustration image placeholder -->
         <!-- <img class="w-[498px] h-[456px] left-[-186.83px] top-[361.73px] absolute origin-top-left rotate-[-34.62deg]" src="https://via.placeholder.com/498x456" /> -->
         <div class="mt-20 flex-col justify-start items-start gap-8 inline-flex" x-data="{ category: 'list' }">
-          <div class="justify-start items-start gap-6 inline-flex">
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             <button 
-              class="block text-left grow shrink basis-0 self-stretch p-6 bg-white rounded-xl border flex-col justify-start items-center gap-3 inline-flex"
+              class="block w-full text-left p-6 bg-white rounded-xl border flex-col justify-start items-center gap-3 inline-flex"
               :class="category === 'list' ? 'shadow-highlight border-purple-700' : 'border-neutral-200'"
               @click="category = 'list'"
             >
@@ -83,7 +83,7 @@
               <div class="self-stretch text-neutral-500 text-sm font-normal leading-snug">Assurez la conformité de votre organisation. Maitrisez vos coûts.</div>
             </button>
             <button 
-              class="block text-left grow shrink basis-0 self-stretch p-6 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-3 inline-flex"
+              class="block w-full text-left p-6 bg-white rounded-xl border flex-col justify-start items-center gap-3 inline-flex"
               :class="category === 'map' ? 'shadow-highlight border-purple-700' : 'border-neutral-200'"
               @click="category = 'map'"
             >
@@ -96,7 +96,7 @@
               <div class="self-stretch text-neutral-500 text-sm font-normal leading-snug">Mettez en évidence les données essentielles. Générez des cartes qui correspondent précisément à vos besoins.</div>
             </button>
             <button 
-              class="block text-left grow shrink basis-0 self-stretch p-6 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-3 inline-flex"
+              class="block w-full text-left p-6 bg-white rounded-xl border flex-col justify-start items-center gap-3 inline-flex"
               :class="category === 'dependencies' ? 'shadow-highlight border-purple-700' : 'border-neutral-200'"
               @click="category = 'dependencies'"
             >
@@ -109,7 +109,7 @@
               <div class="self-stretch text-neutral-500 text-sm font-normal leading-snug">Visualisez en un coup d’œil les dépendances IT à travers toutes les couches du SI.  Optimisez la maintenance et la planification.</div>
             </button>
             <button 
-              class="block text-left grow shrink basis-0 self-stretch p-6 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-center gap-3 inline-flex"
+              class="block w-full text-left p-6 bg-white rounded-xl border flex-col justify-start items-center gap-3 inline-flex"
               :class="category === 'api' ? 'shadow-highlight border-purple-700' : 'border-neutral-200'"
               @click="category = 'api'"
             >
@@ -166,7 +166,7 @@
       <div class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-start flex">
         <div class="max-w-7xl mx-auto self-stretch justify-start items-start gap-6 inline-flex">
           <div class="pb-14 justify-start items-start gap-2.5 flex">
-            <div class="text-stone-950 text-[44px] font-semibold leading-[52px]">Votre SI sous son meilleur angle : le vôtre</div>
+            <h2 class="text-stone-950 text-[44px] font-semibold leading-[52px]">Votre SI sous son meilleur angle : le vôtre</h2>
           </div>
           <!-- TODO: remove large explicit width assignment -->
           <img class="w-[438px] h-40 relative" src="./images/illustrations/hand-3.png" />
@@ -184,36 +184,36 @@
             <img class="w-full relative rounded-lg border border-neutral-200" src="./images/product/map.png" />
             <div class="grid grid-cols-5 gap-1.5">
               <button 
-                class="w-full px-3 rounded-md justify-center items-center gap-2 flex"
-                :class="category === 'wifi' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                class="w-full px-3 rounded-md border justify-center items-center gap-2 flex"
+                :class="category === 'wifi' ? 'bg-stone-950 text-white border-neutral-200' : 'text-stone-950 border-neutral-200'"
                 @click="category = 'wifi'"
               >
                 <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Wi-Fi Network</div>
               </button>
               <button 
-                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
-                :class="category === 'hardware' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                class="w-full px-3 rounded-md border justify-center items-center gap-2 flex"
+                :class="category === 'hardware' ? 'bg-stone-950 text-white border-neutral-200' : 'text-stone-950 border-neutral-200'"
                 @click="category = 'hardware'"
               >
                 <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Hardware Component</div>
               </button>
               <button 
-                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
-                :class="category === 'access' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                class="w-full px-3 rounded-md border justify-center items-center gap-2 flex"
+                :class="category === 'access' ? 'bg-stone-950 text-white border-neutral-200' : 'text-stone-950 border-neutral-200'"
                 @click="category = 'access'"
               >
                 <div class="text-[15px] font-medium leading-[30px] whitespace-pre">User and Access Rights</div>
               </button>
               <button 
-                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
-                :class="category === 'software' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                class="w-full px-3 rounded-md border justify-center items-center gap-2 flex"
+                :class="category === 'software' ? 'bg-stone-950 text-white border-transparent' : 'text-stone-950 border-neutral-200'"
                 @click="category = 'software'"
               >
                 <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Software License</div>
               </button>
               <button 
-                class="w-full px-3 rounded-md border border-neutral-200 justify-center items-center gap-2 flex"
-                :class="category === 'server' ? 'bg-stone-950 text-white' : 'text-stone-950'"
+                class="w-full px-3 rounded-md border justify-center items-center gap-2 flex"
+                :class="category === 'server' ? 'bg-stone-950 text-white border-transparent' : 'text-stone-950 border-neutral-200'"
                 @click="category = 'server'"
               >
                 <div class="text-[15px] font-medium leading-[30px] whitespace-pre">Server</div>
@@ -221,7 +221,7 @@
             </div>
           </div>
           <!-- Block 2 -->
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl border border-neutral-200 flex-col justify-start items-start inline-flex">
               <div class="self-stretch h-[268px] px-10 pt-10 pb-8 flex-col justify-start items-start gap-3 flex">
                 <div class="self-stretch text-stone-950 text-2xl font-semibold leading-loose">Définissez votre propre univers de données</div>
@@ -238,7 +238,7 @@
             </div>
           </div>
           <!-- Block 3 -->
-          <div class="grid grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div class="self-stretch p-10 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-start gap-3 inline-flex">
               <div class="w-12 h-12 relative bg-purple-100 rounded">
                 <div class="w-8 h-8 left-[8px] top-[8px] absolute bg-cover" style="background-image: url('./images/arrow-reload.svg')"></div>
@@ -262,7 +262,7 @@
             </div>
           </div>
           <!-- Block 4 -->
-          <div class="grid grid-cols-2 gap-6 flex">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 flex">
             <div class="p-10 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-start gap-3 inline-flex">
               <div class="w-12 h-12 relative bg-purple-100 rounded">
                 <div class="w-8 h-8 left-[8px] top-[8px] absolute bg-cover" style="background-image: url('./images/list-unordered.svg')"></div>
@@ -283,14 +283,14 @@
 
       <!-- Section -->
 
-      <div class="pt-20 flex-col justify-start items-center gap-[120px] flex" x-data="{ persona: 'dsi' }">
+      <div class="pt-20 px-6 flex-col justify-start items-center gap-[120px] flex" x-data="{ persona: 'dsi' }">
         <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-14 flex">
-          <div class="h-[132px] flex-col justify-start items-center gap-6 flex">
-            <div class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Toutes les équipes, en un seul endroit</div>
+          <div class="flex-col justify-start items-center gap-6 flex">
+            <h2 class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Toutes les équipes, en un seul endroit</h2>
             <div class="self-stretch text-center text-neutral-500 text-xl font-medium leading-7">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum.</div>
           </div>
           <div class="flex-col justify-start items-start gap-8 flex">
-            <div class="w-full grid grid-cols-5 gap-6 inline-flex">
+            <div class="w-full grid grid-cols-3 lg:grid-cols-6 gap-6 inline-flex">
               <button 
                 class="block text-left grow shrink basis-0 px-6 py-3 bg-white rounded-xl border flex-col justify-start items-center gap-1 inline-flex"
                 :class="persona === 'dsi' ? 'border-purple-700 shadow-highlight' : 'border-neutral-200'"
@@ -370,9 +370,9 @@
           </div>
         </div>
         <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-14 flex">
-          <div class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Pourquoi adopter Situation ?</div>
+          <h2 class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Pourquoi adopter Situation ?</h2>
           <div class="flex-col justify-start items-start gap-6 flex">
-            <div class="w-full grid grid-cols-3 gap-6">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="px-10 py-6 bg-white rounded-xl border border-neutral-200 flex-col gap-2 inline-flex">
                 <div class="self-stretch text-purple-700 text-[44px] font-semibold leading-[52px]">Illimité</div>
                 <div class="self-stretch text-neutral-500 text-base font-semibold leading-normal">d’utilisateurs et d’actifs collectés</div>
@@ -386,7 +386,7 @@
                 <div class="self-stretch text-neutral-500 text-base font-semibold leading-normal">pour votre première cartographie</div>
               </div>
             </div>
-            <div class="w-full justify-start items-start gap-6 inline-flex">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 inline-flex">
               <div class="grow shrink basis-0 p-10 bg-white rounded-xl border border-neutral-200 flex-col justify-start items-start gap-3 inline-flex">
                 <div class="w-12 h-12 relative bg-purple-100 rounded">
                   <div class="w-8 h-8 left-[8px] top-[8px] absolute bg-cover" style="background-image: url('./images/clock.svg')"></div>
@@ -402,7 +402,7 @@
                 <div class="self-stretch text-neutral-500 text-base font-normal leading-normal">Situation est conçue pour être presque imperceptible et opère sans impacter les performances de votre système, même dans les environnements sensibles.</div>
               </div>
             </div>
-            <div class="w-full bg-stone-950 rounded-xl justify-center items-start gap-8 inline-flex">
+            <div class="w-full bg-stone-950 rounded-xl justify-center items-start gap-8 lg:inline-flex">
               <div class="grow shrink basis-0 pl-10 py-10 flex-col justify-start items-start gap-6 inline-flex">
                 <div class="self-stretch h-[102px] flex-col justify-start items-start gap-2 flex">
                   <div class="self-stretch text-white text-3xl font-semibold leading-[38px]">S’inscrire sur la liste d’attente</div>
@@ -417,7 +417,9 @@
                   </div>
                 </div>
               </div>
-              <img class="w-full max-w-[549px] relative" src="./images/product/table-cropped-2.png" />
+              <div class="flex items-center justify-end">
+                <img class="w-full max-w-[549px] relative" src="./images/product/table-cropped-2.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -494,7 +496,7 @@
       <div class="w-full px-[271px] py-20 bg-neutral-100 flex-col justify-start items-center flex">
         <div class="w-full max-w-5xl mx-auto self-stretch justify-between items-start gap-6 inline-flex">
           <div class="pb-14 flex-col justify-start items-start gap-3 inline-flex">
-            <div class="self-stretch text-stone-950 text-[44px] font-semibold leading-[52px]">Pricing plan</div>
+            <h2 class="self-stretch text-stone-950 text-[44px] font-semibold leading-[52px]">Pricing plan</h2>
             <div class="self-stretch text-neutral-500 text-xl font-medium leading-7">Créez des cartes incroyables gratuitement</div>
           </div>
           <img class="w-full max-w-[398px] relative" src="./images/illustrations/hand-4.png" />
@@ -568,7 +570,7 @@
 
       <div class="w-full px-[155px] py-20 bg-white flex-col justify-start items-center gap-14 flex">
         <div class="w-full max-w-7xl mx-auto flex-col justify-start items-center gap-3 flex">
-          <div class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Questions/Réponses</div>
+          <h2 class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Questions/Réponses</h2>
           <div class="text-center text-neutral-500 text-xl font-medium leading-7">Les questions que nous ont (déjà) posé nos utilisateurs</div>
         </div>
         <div class="w-full max-w-7xl mx-auto flex-col justify-start items-start flex">
@@ -609,14 +611,17 @@
           <div class="text-stone-950 text-base font-normal leading-normal">Une autre questions ?</div>
           <div class="border-b border-purple-700 justify-center items-center gap-2 flex">
             <!-- TODO: add link URL -->
-            <a class="text-purple-700 text-[15px] font-medium leading-[30px]">Contactez-nous</a>
+            <a href="" class="text-purple-700 text-[15px] font-medium leading-[30px]">Contactez-nous</a>
             <div class="w-5 h-5 relative bg-cover" style="background-image: url('./images/arrow-right.svg')"></div>
           </div>
         </div>
       </div>
-      <div class="pt-20 bg-white flex-col justify-start items-center gap-12 flex">
-        <div class="self-stretch h-[168px] flex-col justify-start items-center gap-6 flex">
-          <div class="self-stretch text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Prêt à (re)prendre le contrôle de votre écosystème IT?</div>
+
+      <!-- CTA -->
+
+      <div class="px-6 pt-20 bg-white flex-col justify-start items-center gap-12 flex">
+        <div class="self-stretch py-8 flex-col justify-start items-center gap-6 flex">
+          <h2 class="self-stretch text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Prêt à (re)prendre le contrôle de votre écosystème IT?</h2>
           <div class="justify-start items-start gap-6 inline-flex">
             <div class="w-[185px] px-4 bg-purple-700 rounded-md justify-center items-center gap-2 flex">
               <div class="text-white text-[15px] font-medium leading-[30px] whitespace-pre">Essayer gratuitement</div>
@@ -626,7 +631,7 @@
             </div>
           </div>
         </div>
-        <img class="max-w-7xl w-full mx-auto relative" src="./images/illustration-callout.svg" />
+        <img class="max-w-5xl w-full mx-auto relative" src="./images/illustration-callout.svg" />
       </div>
 
       <!-- Footer -->
@@ -646,10 +651,14 @@
             </div>
           </div>
           <div class="flex-col justify-start items-end gap-2 inline-flex">
-            <div class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Produit</div>
-            <div class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Comment ça marche</div>
-            <div class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Pricing</div>
-            <div class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">FAQ</div>
+            <!-- TODO: add URL -->
+            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Produit</a>
+            <!-- TODO: add URL -->
+            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Comment ça marche</a>
+            <!-- TODO: add URL -->
+            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Pricing</a>
+            <!-- TODO: add URL -->
+            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">FAQ</a>
           </div>
         </div>
         <div class="w-full max-w-7xl mx-auto justify-between items-start inline-flex">
