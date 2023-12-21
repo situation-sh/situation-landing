@@ -31,14 +31,14 @@
 
       <header class="w-full px-10 py-8 bg-white justify-start items-center gap-[135px] inline-flex">
         <div class="grow shrink basis-0 h-[30px] justify-start items-center gap-10 flex">
-          <a title="Situation SAS" class="w-[127.02px] h-7 relative">
+          <a href="/" title="Situation SAS" class="w-[127.02px] h-7 relative">
             <img alt="" class="w-[127.02px] h-7 left-0 top-0 absolute" src="./images/logo.svg" />
           </a>
           <div class="justify-start items-start gap-6 hidden lg:flex">
-            <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Produit</div>
-            <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Comment ça marche</div>
-            <div class="text-stone-950 text-[15px] font-medium leading-[30px]">Pricing</div>
-            <div class="text-stone-950 text-[15px] font-medium leading-[30px]">FAQ</div>
+            <a href="#product" class="text-stone-950 text-[15px] font-medium leading-[30px]">Produit</a>
+            <a href="#how-it-works" class="text-stone-950 text-[15px] font-medium leading-[30px]">Comment ça marche</a>
+            <a href="#pricing" class="text-stone-950 text-[15px] font-medium leading-[30px]">Pricing</a>
+            <a href="#faq" class="text-stone-950 text-[15px] font-medium leading-[30px]">FAQ</a>
           </div>
         </div>
         <div class="justify-start items-center gap-6 flex">
@@ -167,7 +167,7 @@
 
       <!-- Section -->
 
-      <div class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-start flex">
+      <div id="product" class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-start flex">
         <div class="max-w-7xl mx-auto self-stretch justify-start items-start gap-6 inline-flex">
           <div class="pb-14 justify-start items-start gap-2.5 flex">
             <h2 class="text-stone-950 text-[44px] font-semibold leading-[52px]">Votre SI sous son meilleur angle : le vôtre</h2>
@@ -287,7 +287,7 @@
 
       <!-- Section -->
 
-      <div class="pt-20 px-6 flex-col justify-start items-center gap-[120px] flex" x-data="{ persona: 'dsi' }">
+      <div id="how-it-works" class="pt-20 px-6 flex-col justify-start items-center gap-[120px] flex" x-data="{ persona: 'dsi' }">
         <div class="max-w-7xl mx-auto flex-col justify-start items-center gap-14 flex">
           <div class="flex-col justify-start items-center gap-6 flex">
             <h2 class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Toutes les équipes, en un seul endroit</h2>
@@ -502,7 +502,7 @@
       
       <!-- Section -->
 
-      <div class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-center flex">
+      <div id="pricing" class="w-full px-6 py-20 bg-neutral-100 flex-col justify-start items-center flex">
         <div class="w-full max-w-5xl mx-auto self-stretch justify-between items-start gap-6 inline-flex">
           <div class="pb-14 flex-col justify-start items-start gap-3 inline-flex">
             <h2 class="self-stretch text-stone-950 text-[44px] font-semibold leading-[52px]">Pricing plan</h2>
@@ -577,7 +577,7 @@
 
       <!-- Section: QA -->
 
-      <div class="w-full p-6 py-20 bg-white flex-col justify-start items-center gap-14 flex">
+      <div id="faq" class="w-full p-6 py-20 bg-white flex-col justify-start items-center gap-14 flex">
         <div class="w-full max-w-7xl mx-auto flex-col justify-start items-center gap-3 flex">
           <h2 class="text-center text-stone-950 text-[44px] font-semibold leading-[52px]">Questions/Réponses</h2>
           <div class="text-center text-neutral-500 text-xl font-medium leading-7">Les questions que nous ont (déjà) posé nos utilisateurs</div>
@@ -661,13 +661,13 @@
           </div>
           <div class="flex-col justify-start items-end gap-2 inline-flex">
             <!-- TODO: add URL -->
-            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Produit</a>
+            <a href="#product" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Produit</a>
             <!-- TODO: add URL -->
-            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Comment ça marche</a>
+            <a href="#how-it-works" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Comment ça marche</a>
             <!-- TODO: add URL -->
-            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Pricing</a>
+            <a href="#pricing" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">Pricing</a>
             <!-- TODO: add URL -->
-            <a href="" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">FAQ</a>
+            <a href="#faq" class="self-stretch text-right text-stone-950 text-xl font-semibold leading-7">FAQ</a>
           </div>
         </div>
         <div class="w-full max-w-7xl mx-auto justify-between items-start inline-flex">
