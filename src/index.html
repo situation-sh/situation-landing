@@ -9,11 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./index.compiled.css" />
     <script
-      defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <!-- lemcal -->
+    <script
+      src="https://cdn.lemcal.com/lemcal-integrations.min.js"
+      defer
     ></script>
   </head>
-  <body class="w-full font-sans">
+
+  <body
+    class="w-full font-sans"
+    x-data="{lemcalOpen: false, typeformURL: 'https://5980lnv6w4x.typeform.com/to/ivcR8RA9'}"
+  >
+    <dialog
+      x-ref="lemcal"
+      class="overflow-x-visible bg-transparent px-10"
+      x-transition
+      x-show="lemcalOpen"
+      x-effect="if (lemcalOpen) { $refs.lemcal.showModal(); } else { $refs.lemcal.close(); }"
+    >
+      <div
+        @click.outside="lemcalOpen=false"
+        class="lemcal-embed-booking-calendar w-full"
+        data-user="usr_cN56yiHzdp5P3Ayko"
+        data-meeting-type="met_SuxoihxGcwJChtaYv"
+      ></div>
+    </dialog>
+
     <div
       class="bg-white flex-col justify-start items-center inline-flex w-full"
     >
@@ -83,27 +107,33 @@
             >
           </div>
         </div>
-        <div class="justify-start items-center gap-6 flex">
+        <div class="flex flex-row justify-start items-center gap-6">
           <!-- <div
             class="hidden lg:block text-stone-950 text-[15px] font-medium leading-[30px]"
           >
             Se connecter
           </div> -->
-          <div
+          <button
             class="lg:block px-3 rounded-md border border-stone-950 justify-center items-center gap-2 flex"
+            @click="lemcalOpen=true"
           >
             <div
-              class="text-stone-950 text-sm py-0.5 font-medium leading-normal"
+              class="text-stone-950 text-sm py-0.5 font-medium leading-normal cursor-pointer"
+              @click="lemcalOpen=true"
             >
               Planifier un rendez-vous
             </div>
-          </div>
+          </button>
+
           <div
             class="px-3 bg-primary rounded-md justify-center items-center gap-2 flex"
           >
-            <div class="text-white text-sm py-0.5 font-medium leading-normal">
+            <a
+              :href="typeformURL"
+              class="text-white text-sm py-0.5 font-medium leading-normal"
+            >
               S’inscrire sur la liste d’attente
-            </div>
+            </a>
           </div>
         </div>
       </header>
@@ -128,15 +158,19 @@
             <div
               class="px-4 bg-primary rounded-md justify-center items-center gap-2 flex"
             >
-              <div class="text-white text-[15px] font-medium leading-[30px]">
+              <a
+                :href="typeformURL"
+                class="text-white text-[15px] font-medium leading-[30px]"
+              >
                 S’inscrire sur la liste d’attente
-              </div>
+              </a>
             </div>
             <div
               class="px-4 rounded-md border border-stone-950 justify-center items-center gap-2 flex"
             >
               <div
-                class="text-stone-950 text-[15px] font-medium leading-[30px]"
+                class="text-stone-950 text-[15px] font-medium leading-[30px] cursor-pointer"
+                @click="lemcalOpen=true"
               >
                 Planifier un rendez-vous
               </div>
@@ -926,11 +960,12 @@
                 <div
                   class="self-stretch h-[102px] flex-col justify-start items-start gap-2 flex"
                 >
-                  <div
+                  <a
+                    :href="typeformURL"
                     class="self-stretch text-white text-3xl font-semibold leading-[38px]"
                   >
                     S’inscrire sur la liste d’attente
-                  </div>
+                  </a>
                   <div
                     class="self-stretch text-neutral-400 text-xl font-medium leading-7"
                   >
@@ -942,17 +977,19 @@
                   <div
                     class="px-4 bg-primary rounded-md justify-center items-center gap-2 flex"
                   >
-                    <div
+                    <a
+                      :href="typeformURL"
                       class="text-white text-[15px] font-medium leading-[30px]"
                     >
                       S’inscrire sur la liste d’attente
-                    </div>
+                    </a>
                   </div>
                   <div
                     class="px-4 rounded-md border border-white justify-center items-center gap-2 flex"
                   >
                     <div
-                      class="text-white text-[15px] font-medium leading-[30px]"
+                      class="text-white text-[15px] font-medium leading-[30px] cursor-pointer"
+                      @click="lemcalOpen=true"
                     >
                       Planifier un rendez-vous
                     </div>
@@ -1219,7 +1256,9 @@
                 class="h-10 px-4 bg-purple-700 rounded-md justify-center items-center gap-2 inline-flex"
               >
                 <!-- TODO: add link URL -->
-                <a class="text-white text-[15px] font-medium leading-[30px]"
+                <a
+                  :href="typeformURL"
+                  class="text-white text-[15px] font-medium leading-[30px]"
                   >Rejoignez la liste d’attente</a
                 >
               </div>
@@ -1344,16 +1383,28 @@
               Besoin sur mesure ?
             </div>
             <div
-              class="border-b border-primary justify-center items-center gap-2 flex"
+              class="border-b border-primary justify-center items-center gap-2 flex flex-row text-primary"
             >
               <!-- TODO: add link URL -->
               <a class="text-primary text-[15px] font-medium leading-[30px]"
                 >Demander un devis</a
               >
-              <div
-                class="w-5 h-5 relative text-primary"
-                style="background-image: url('./images/arrow-right.svg')"
-              ></div>
+              <div class="w-4 h-4 relative text-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-full h-full"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -1542,9 +1593,10 @@
               class="px-4 rounded-md border border-stone-950 justify-center items-center gap-2 flex"
             >
               <div
-                class="text-stone-950 text-[15px] font-medium leading-[30px]"
+                class="text-stone-950 text-[15px] font-medium leading-[30px] cursor-pointer"
+                @click="lemcalOpen=true"
               >
-                Planifier une démo
+                Planifier un rendez-vous
               </div>
             </div>
           </div>
