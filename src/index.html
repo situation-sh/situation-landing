@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
   <head>
     <!-- TODO: review page title -->
-    <title>Situation SAS</title>
+    <title>Situation</title>
+    <link rel="icon" href="/favicon.svg" />
     <!-- TODO: add a meta description -->
     <meta charset="UTF-8" />
-    <meta name="description" content="Situation SAS" />
+    <meta name="description" content="Situation" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./index.compiled.css" />
     <script
@@ -21,7 +22,7 @@
 
   <body
     class="w-full font-sans"
-    x-data="{lemcalOpen: false, typeformURL: 'https://5980lnv6w4x.typeform.com/to/ivcR8RA9'}"
+    x-data="{lemcalOpen: false, typeformURL: 'https://forms.situation.sh'}"
   >
     <dialog
       x-ref="lemcal"
@@ -61,9 +62,12 @@
           <div
             class="border-b border-stone-950 justify-center items-center gap-2 flex"
           >
-            <div class="text-stone-950 text-sm font-medium leading-normal">
+            <a
+              :href="typeformURL"
+              class="text-stone-950 text-sm font-medium leading-normal"
+            >
               S’inscrire
-            </div>
+            </a>
           </div>
         </div>
         <div class="w-4 h-4 relative"></div>
@@ -356,9 +360,12 @@
             <div
               class="h-10 px-4 bg-primary rounded-md justify-center items-center gap-2 inline-flex"
             >
-              <div class="text-white text-[15px] font-medium leading-[30px]">
+              <a
+                href="#product"
+                class="text-white text-[15px] font-medium leading-[30px]"
+              >
                 Découvrir Situation
-              </div>
+              </a>
             </div>
           </div>
           <!-- <div
@@ -1232,7 +1239,7 @@
                 class="self-stretch grow shrink basis-0 flex-col justify-start items-start gap-3 flex"
               >
                 <div
-                  class="px-2.5 bg-purple-700 rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                  class="px-2.5 bg-primary rounded-[100px] justify-center items-center gap-2.5 inline-flex"
                 >
                   <div
                     class="text-white text-[15px] font-medium leading-[30px]"
@@ -1253,7 +1260,7 @@
                 </div>
               </div>
               <div
-                class="h-10 px-4 bg-purple-700 rounded-md justify-center items-center gap-2 inline-flex"
+                class="h-10 px-4 bg-primary rounded-md justify-center items-center gap-2 inline-flex"
               >
                 <!-- TODO: add link URL -->
                 <a
@@ -1386,7 +1393,9 @@
               class="border-b border-primary justify-center items-center gap-2 flex flex-row text-primary"
             >
               <!-- TODO: add link URL -->
-              <a class="text-primary text-[15px] font-medium leading-[30px]"
+              <a
+                href="mailto:julien@situation.sh"
+                class="text-primary text-[15px] font-medium leading-[30px]"
                 >Demander un devis</a
               >
               <div class="w-4 h-4 relative text-primary">
@@ -1412,7 +1421,7 @@
 
       <!-- Section: QA -->
 
-      <div
+      <!-- <div
         id="faq"
         class="w-full p-6 py-20 bg-white flex-col justify-start items-center gap-14 flex"
       >
@@ -1450,7 +1459,7 @@
                 <img src="./images/plus.svg" alt="" />
               </div>
             </summary>
-            <!-- TODO: add content -->
+
             <div
               class="text-neutral-500 text-base font-normal leading-normal mt-4"
             >
@@ -1478,7 +1487,7 @@
                 <img src="./images/plus.svg" alt="" />
               </div>
             </summary>
-            <!-- TODO: add content -->
+
             <div
               class="text-neutral-500 text-base font-normal leading-normal mt-4"
             >
@@ -1506,7 +1515,7 @@
                 <img src="./images/plus.svg" alt="" />
               </div>
             </summary>
-            <!-- TODO: add content -->
+
             <div
               class="text-neutral-500 text-base font-normal leading-normal mt-4"
             >
@@ -1535,7 +1544,7 @@
                 <img src="./images/plus.svg" alt="" />
               </div>
             </summary>
-            <!-- TODO: add content -->
+
             <div
               class="text-neutral-500 text-base font-normal leading-normal mt-4"
             >
@@ -1554,7 +1563,7 @@
           <div
             class="border-b border-primary justify-center items-center gap-2 flex"
           >
-            <!-- TODO: add link URL -->
+
             <a
               href=""
               class="text-primary text-[15px] font-medium leading-[30px]"
@@ -1566,7 +1575,7 @@
             ></div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- CTA -->
 

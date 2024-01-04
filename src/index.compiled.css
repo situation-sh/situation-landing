@@ -719,20 +719,8 @@ video {
   height: 70px;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .h-full{
   height: 100%;
-}
-
-.min-h-\[100px\]{
-  min-height: 100px;
-}
-
-.min-h-\[500px\]{
-  min-height: 500px;
 }
 
 .w-1\/2{
@@ -811,32 +799,8 @@ video {
   width: 100%;
 }
 
-.w-\[800px\]{
-  width: 800px;
-}
-
-.w-\[400px\]{
-  width: 400px;
-}
-
-.w-screen{
-  width: 100vw;
-}
-
 .min-w-\[320px\]{
   min-width: 320px;
-}
-
-.min-w-\[100px\]{
-  min-width: 100px;
-}
-
-.min-w-\[500px\]{
-  min-width: 500px;
-}
-
-.min-w-\[600px\]{
-  min-width: 600px;
 }
 
 .max-w-4xl{
@@ -1010,12 +974,12 @@ video {
   align-self: stretch;
 }
 
-.overflow-hidden{
-  overflow: hidden;
-}
-
 .overflow-x-visible{
   overflow-x: visible;
+}
+
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 
 .whitespace-pre{
@@ -1142,13 +1106,13 @@ video {
   background-color: rgb(12 10 9 / var(--tw-bg-opacity));
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-transparent{
-  background-color: transparent;
 }
 
 .bg-cover{
@@ -1161,10 +1125,6 @@ video {
 
 .p-6{
   padding: 1.5rem;
-}
-
-.p-2{
-  padding: 0.5rem;
 }
 
 .px-10{
@@ -1235,11 +1195,6 @@ video {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pb-10{
