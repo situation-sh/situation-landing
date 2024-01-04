@@ -986,6 +986,10 @@ video {
   white-space: pre;
 }
 
+.whitespace-pre-line{
+  white-space: pre-line;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -1084,11 +1088,6 @@ video {
 .bg-purple-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 232 255 / var(--tw-bg-opacity));
-}
-
-.bg-purple-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .bg-sky-100{
